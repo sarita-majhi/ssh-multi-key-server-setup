@@ -38,20 +38,21 @@ GitHub Actions
 
  
 # Create SSH Keys
-```bash
+```Bash
 ssh-keygen 
 type keyname
 default file location
 ls ~/ssh/
+#-----------------------------------
 
 # Connect SSH Keys
-```bash
+```Bash
 ssh -i ~/.ssh/key_1 user@<server-ip>
 ssh -i ~/.ssh/key_2 user@<server-ip>
-
+#____________________________________
 
 #SSH Client Configuration(Aliases)
-nano /~/ssh/config
+nano ~/.ssh/config
 
 Host myserver
     HostName <server-ip>
@@ -62,12 +63,14 @@ Host myserver2
     HostName <server-ip>
     User ubuntu
     IdentityFile ~/.ssh/key_2
+#_____________________________________
 
 
 # Connect using:
 ```Bash
 ssh myserver
 ssh myserver2
+#______________________________________
 
 
 # Disable Root Login & Enforce Key-Only SSH
@@ -78,6 +81,7 @@ PubkeyAuthentication yes
 
 ```Bash
 sudo systemctl restart sshd
+#_________________________________________
 
 
 #Firewall Configuration with UFW
@@ -87,16 +91,18 @@ sudo apt install ufw -y
 sudo ufw allow OpenSSH  **allow ssh**
 sudo ufw enable
 sudo ufw status verbose
+#___________________________________________
 
 
 #Security Hardening-Fail2Ban
 ```Bash
 sudo apt update
 sudo apt install fail2ban -y
-sudo systemctl enable fail2ban
+sudo systemctl enabke fail2ban
 sudo systemctl start fail2ban
 
 sudo systemctl status fail2ban
+#_____________________________________________
 
 
 #Check SSH Port and Firewall
@@ -104,7 +110,7 @@ sudo ss -tulpn | grep :22
 sudo ufw status
 sudo ufw allow ssh
 sudo ufw reload
-
+#______________________________________________
 
 
 
