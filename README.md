@@ -11,7 +11,6 @@ It reflects real-world responsibilities of a **DevOps / Cloud Engineer**, focusi
 - Provision a secure remote Linux server  
 - Configure SSH access using **multiple SSH key pairs**
 - Disable root login and enforce key-only SSH
-- Remote Linux server created
 - SSH access verified using both keys
 - Configure SSH client aliases
 - Protect the server from brute-force attacks
