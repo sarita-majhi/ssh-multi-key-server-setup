@@ -14,12 +14,12 @@ type keyname
 default file location
 ls ~/ssh/
 
-## Connect SSH Keys
+# Connect SSH Keys
 ```bash
 ssh -i ~/.ssh/key_1 user@<server-ip>
 ssh -i ~/.ssh/key_2 user@<server-ip>
 
-##SSH Client Configuration(Aliases)
+#SSH Client Configuration(Aliases)
 nano /~/ssh/config
 
 Host myserver
